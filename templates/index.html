@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UU PDP Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input[type=text] { width: 80%; padding: 10px; }
+        button { padding: 10px 20px; }
+        .answer { margin-top: 20px; }
+        .sources { margin-top: 20px; font-size: 0.9em; color: #555; }
+    </style>
+</head>
+<body>
+
+<h1>📜 UU PDP Chatbot</h1>
+
+<form method="post">
+    <input type="text" name="question" placeholder="Tanyakan tentang UUPDP..." value="{{ question }}" required />
+    <button type="submit">Tanya</button>
+</form>
+
+{% if answer %}
+<div class="answer">
+    <h3>💬 Jawaban:</h3>
+    <div style="white-space: pre-line;">{{ answer | safe }}</div>
+</div>
+{% endif %}
+
+
+{% if sources %}
+<div class="sources">
+    <h4>📚 Sumber Terkait:</h4>
+    <ul>
+        {% for source in sources %}
+        <li>Bab: {{ source.bab }}, Pasal: {{ source.pasal_number }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+</body>
+</html>
