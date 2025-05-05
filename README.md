@@ -18,17 +18,17 @@ This chatbot can answer questions about the Undang-Undang Pelindungan Data Priba
 
 📂 Project Structure
 
-├── app.py                  # FastAPI web server
-├── retriever.py             # Retrieval logic from ChromaDB
-├── generator.py             # OpenAI answer generation
-├── ingest_data.py           # Data embedding and database population
-├── templates/
-│   └── index.html           # Frontend web page
-├── data/
-│   └── UUPDP_with_embeddings.parquet
-├── db/                      # ChromaDB database files
-├── static/                  # (Optional) CSS/JS files
-└── requirements.txt         # Python dependencies
+├── app.py                  # FastAPI web server  
+├── retriever.py            # Retrieval logic from ChromaDB  
+├── generator.py            # OpenAI answer generation  
+├── ingest_data.py          # Data embedding and database population  
+├── templates/  
+│   └── index.html          # Frontend web page  
+├── data/  
+│   └── UUPDP_with_embeddings.parquet  
+├── db/                     # ChromaDB database files  
+├── static/                 # (Optional) CSS/JS files  
+└── requirements.txt        # Python dependencies  
 
 🛠️ Installation
 1. Clone the Repository
